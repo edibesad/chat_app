@@ -22,3 +22,32 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: ArialNova
+      fonts:
+        - asset: assets/fonts/arial/ArialNova.ttf
+        - asset: assets/fonts/arial/ArialNova-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/arial/ArialNova-Light.ttf
+          weight: 300
+        - asset: assets/fonts/arial/ArialNovaCond.ttf
+        - asset: assets/fonts/arial/ArialNovaCond-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/arial/ArialNovaCond-Light.ttf
+          weight: 300
+        - asset: assets/fonts/arial/ArialNova-Italic.ttf
+          style: italic
+        - asset: assets/fonts/arial/ArialNovaCond-Italic.ttf
+          style: italic
+        - asset: assets/fonts/arial/ArialNova-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/arial/ArialNova-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/arial/ArialNovaCond-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/arial/ArialNovaCond-LightItalic.ttf
+          weight: 300
+          style: italic
