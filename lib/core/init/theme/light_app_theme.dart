@@ -18,7 +18,7 @@ class LightAppTheme implements AppTheme {
           background: Colors.white,
           onBackground: Color(0xff1a1c1e),
           surface: Color.fromARGB(255, 14, 110, 86),
-          onSurface: Colors.white),
+          onSurface: Color.fromARGB(255, 0, 0, 0)),
       tabBarTheme: const TabBarTheme(
           labelColor: Colors.white,
           labelStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
@@ -26,5 +26,9 @@ class LightAppTheme implements AppTheme {
               TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
           unselectedLabelColor: Color.fromARGB(144, 255, 255, 255),
           indicatorColor: Colors.white,
-          indicatorSize: TabBarIndicatorSize.tab));
+          indicatorSize: TabBarIndicatorSize.tab),
+      elevatedButtonTheme: const ElevatedButtonThemeData(
+          style: ButtonStyle(
+              foregroundColor: MaterialStatePropertyAll(Colors.white))),
+      appBarTheme: const AppBarTheme(foregroundColor: Colors.white));
 }

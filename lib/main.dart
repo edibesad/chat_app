@@ -1,9 +1,14 @@
+import 'package:chat_app/core/constants/enums/locales.dart';
+import 'package:chat_app/core/init/app_init.dart';
+import 'package:chat_app/core/init/app_localization.dart';
 import 'package:chat_app/core/init/theme/dark_app_theme.dart';
 import 'package:chat_app/core/init/theme/light_app_theme.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  await AppInit().init();
+  runApp(AppLocalization(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -12,6 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: context.locale,
+      supportedLocales: context.supportedLocales,
+      localizationsDelegates: context.localizationDelegates,
       title: 'Flutter Demo',
       theme: LightAppTheme().themeData,
       darkTheme: DarkAppTheme().themeData,
@@ -59,12 +67,18 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const Text(
-                'You have pushed the button this many times:',
-              ),
+                'welcome',
+              ).tr(),
               Text(
                 '$_counter',
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
+              ElevatedButton(
+                  onPressed: () {
+                    AppLocalization.updateLanguage(
+                        context: context, value: Locales.tr);
+                  },
+                  child: Text("Login"))
             ],
           ),
         ),
