@@ -17,6 +17,8 @@ dependencies:
   json_annotation: ^4.8.1
   get_it: ^7.6.4
   easy_localization: ^3.0.3
+  firebase_core: ^2.24.2
+  onesignal_flutter: ^5.0.4
 
 dev_dependencies:
   flutter_test:
