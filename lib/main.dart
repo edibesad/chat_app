@@ -1,10 +1,11 @@
-import 'package:chat_app/core/constants/enums/locales.dart';
+import 'package:chat_app/core/abstracts/network_service.dart';
 import 'package:chat_app/core/init/app_init.dart';
 import 'package:chat_app/core/init/app_localization.dart';
 import 'package:chat_app/core/init/theme/dark_app_theme.dart';
 import 'package:chat_app/core/init/theme/light_app_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 Future<void> main() async {
   await AppInit().init();
@@ -75,8 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               ElevatedButton(
                   onPressed: () {
-                    AppLocalization.updateLanguage(
-                        context: context, value: Locales.tr);
+                    GetIt.I<NetworkService>().test();
                   },
                   child: Text("Login"))
             ],

@@ -1,8 +1,8 @@
 import 'package:chat_app/core/models/response_model.dart';
-import 'package:chat_app/core/network/dio_manager.dart';
+import 'package:chat_app/core/managers/network/dio_network_manager.dart';
 import 'package:chat_app/core/repository/auth_repository.dart';
 
-class CustomAuthService implements AuthRepository {
+class CustomAuthManager implements AuthRepository {
   @override
   Future<ResponseModel> login(String email, String password) async {
     final response = await DioManager.dio
